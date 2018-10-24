@@ -27,4 +27,24 @@ class App < Sinatra::Base
     words = [params[:word1], params[:word2], params[:word3], params[:word4], params[:word5]]
     words.join(" ") + "."
   end
+
+  get '/:operation/:number1/:number2' do
+    operation = params[:operation]
+    num1 = params[:number1]
+    num2 = params[:number2]
+    
+    case operation
+    when "add"
+      new_num = num1 + num2
+    when "subtract"
+      new_num = num1 - num2
+    when "multiply"
+      new_num = num1 * num2
+    when "divide"
+      new_num = num1 / num2
+    else
+      new_num = nil
+    end
+    new_num
+  end
 end
