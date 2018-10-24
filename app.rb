@@ -45,6 +45,6 @@ class App < Sinatra::Base
     else
       new_num = nil
     end
-    new_num
+    new_num.to_s
   end
 end
