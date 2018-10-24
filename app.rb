@@ -32,7 +32,7 @@ class App < Sinatra::Base
     operation = params[:operation]
     num1 = params[:number1]
     num2 = params[:number2]
-    
+
     case operation
     when "add"
       new_num = num1 + num2
