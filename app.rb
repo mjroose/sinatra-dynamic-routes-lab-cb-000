@@ -20,5 +20,6 @@ class App < Sinatra::Base
     (number).times do
        whole_phrase += phrase
      end
+     whole_phrase
   end
 end
